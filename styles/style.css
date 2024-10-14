@@ -1,0 +1,227 @@
+/* Outfit Font Family  */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Main colors */
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Light-cyan: hsl(178, 100%, 50%, 0.5);
+
+    /* Neutral */
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--Very-dark-blue-main-BG);
+    font-family: "Outfit", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    font-size: 18px;
+}
+
+/* Main Content */
+main {
+    background-color: var(--Very-dark-blue-card-BG);
+    max-width: 20rem;
+    max-height: 36rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: start;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: relative;
+
+}
+
+main header .org-img {
+    max-width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 30px;
+}
+
+main header .overlay {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    height: 83%;
+    width: 85%;
+    opacity: 0;
+    transition: .3s ease;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--Light-cyan);
+}
+
+header:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.img-hover {
+    height: 45px;
+}
+
+/* Article */
+article h1 {
+    color: var(--White);
+    margin: 0 0 0 1.5rem;
+    font-size: 1.35em;
+    font-weight: 450;
+}
+
+/* Heading Hover  */
+article h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+article p {
+    color: var(--White);
+    opacity: 0.5;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95em;
+    font-weight: 250;
+}
+
+/* Section  */
+main section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    font-weight: 200;
+}
+
+main section span {
+    display: flex;
+    align-items: center;
+}
+
+main section span:first-child {
+    color: var(--Cyan);
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+main section span:last-child {
+    color: var(--White);
+    opacity: 0.5;
+    font-weight: 300;
+    font-size: 0.85em;
+}
+
+main section span img {
+    margin: 0 8px;
+}
+
+main section span:first-child img {
+    width: 11px;
+}
+
+main section span:last-child img {
+    width: 20px;
+}
+
+/* Line Break */
+hr {
+    width: 100%;
+    margin: 1rem;
+    height: fit-content;
+    opacity: 0.1;
+}
+
+/* Footer  */
+main footer {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0 0 1rem 0;
+    font-size: 0.95em;
+
+}
+
+footer img {
+    width: 35px;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin: 0 0.5rem;
+}
+
+footer span:first-of-type {
+    color: var(--White);
+    opacity: 0.6;
+    font-weight: 200;
+    margin: 0 0.5rem;
+}
+
+footer span:last-child {
+    color: var(--White);
+}
+
+/* Owner Hover */
+footer span:last-child:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+/* Media Qery */
+@media (max-width: 375px) {
+
+    body {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    main {
+        align-content: space-evenly;
+    }
+
+    article p {
+        padding: 0.7rem;
+    }
+
+    article h1 {
+        margin: -1rem 1rem 0;
+    }
+
+    main section {
+        padding: 0.5rem;
+    }
+
+
+    hr {
+        margin: 0.2rem 1rem;
+    }
+
+    footer {
+        padding: 0.7rem !important;
+    }
+
+}
