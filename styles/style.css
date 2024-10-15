@@ -1,17 +1,16 @@
-/* Outfit Font Family  */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* Font Family & Red Hat Display  */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
-/* Main colors */
 :root {
-    --Soft-blue: hsl(215, 51%, 70%);
-    --Cyan: hsl(178, 100%, 50%);
-    --Light-cyan: hsl(178, 100%, 50%, 0.5);
 
-    /* Neutral */
-    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
-    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
-    --Very-dark-blue-line: hsl(215, 32%, 27%);
-    --White: hsl(0, 0%, 100%);
+     /* Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    
+     /* Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
 }
 
 * {
@@ -22,206 +21,191 @@
 }
 
 body {
-    background-color: var(--Very-dark-blue-main-BG);
-    font-family: "Outfit", sans-serif;
-    width: 100vw;
-    height: 100vh;
+    background-color: var(--Pale-blue);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    font-size: 18px;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
 }
 
 /* Main Content */
 main {
-    background-color: var(--Very-dark-blue-card-BG);
-    max-width: 20rem;
-    max-height: 36rem;
-    display: flex;
-    flex-flow: row wrap;
-    align-content: start;
-    border-radius: 10px;
-    margin: 1rem;
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    max-height: 520px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 32% 15% 15% 8%;
+    border-radius: 20px;
+    margin: 0 1rem;
 }
 
 /* Header */
-header {
+main header img {
     width: 100%;
-    position: relative;
-
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-main header .org-img {
-    max-width: 100%;
-    height: auto;
-    padding: 1.5rem;
-    border-radius: 30px;
+/* Article  */
+main article h1 {
+    padding: 2rem 1rem 1rem;
+    font-weight: 850;
 }
 
-main header .overlay {
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    display: flex;
-    height: 83%;
-    width: 85%;
-    opacity: 0;
-    transition: .3s ease;
-    justify-content: center;
-    flex-flow: row wrap;
-    align-items: center;
-    border-radius: 10px;
-    background-color: var(--Light-cyan);
-}
-
-header:hover .overlay {
-    opacity: 1;
-    cursor: pointer;
-}
-
-.img-hover {
-    height: 45px;
-}
-
-/* Article */
-article h1 {
-    color: var(--White);
-    margin: 0 0 0 1.5rem;
-    font-size: 1.35em;
-    font-weight: 450;
-}
-
-/* Heading Hover  */
-article h1:hover {
-    color: var(--Cyan);
-    cursor: pointer;
-}
-
-article p {
-    color: var(--White);
+main article p {
+    padding: 0 3rem;
+    font-weight: 500;
     opacity: 0.5;
-    padding: 0.7rem 1.5rem;
-    font-size: 0.95em;
-    font-weight: 250;
 }
 
-/* Section  */
+/* Section */
 main section {
+    width: 80%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0.5rem 1.5rem;
-    font-weight: 200;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-pale-blue);
+    margin-left: 2.5rem;
+    border-radius: 10px;
 }
 
-main section span {
+main section div:first-of-type {
+    width: 69%;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
-main section span:first-child {
-    color: var(--Cyan);
-    font-weight: 400;
+main section div p:first-of-type {
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+main section div p:last-of-type {
+    font-weight: 700;
+    opacity: 0.45;
+}
+
+main section div:last-of-type a {
+    color: rgb(94, 5, 211);
+    font-weight: 800;
+}
+
+main section div:last-of-type a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* Button  */
+main .payment {
+    width: 80%;
+    margin: 1.5rem 2.5rem;
+    height: fit-content;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--Bright-blue);
+    color: white;
+    box-shadow: 0 5px 20px 0 var(--Bright-blue);
+    font-weight: 700;
+    font-size: 0.9em;
+    font-family: inherit;
+}
+
+main .payment:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.cancel {
+    color: gray;
+    width: fit-content;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-weight: 800;
+    font-family: inherit;
     font-size: 0.9em;
 }
 
-main section span:last-child {
-    color: var(--White);
-    opacity: 0.5;
-    font-weight: 300;
-    font-size: 0.85em;
-}
-
-main section span img {
-    margin: 0 8px;
-}
-
-main section span:first-child img {
-    width: 11px;
-}
-
-main section span:last-child img {
-    width: 20px;
-}
-
-/* Line Break */
-hr {
-    width: 100%;
-    margin: 1rem;
-    height: fit-content;
-    opacity: 0.1;
-}
-
-/* Footer  */
-main footer {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    padding: 0 0 1rem 0;
-    font-size: 0.95em;
-
-}
-
-footer img {
-    width: 35px;
-    border: 1px solid rgb(255, 255, 255, 0.6);
-    border-radius: 50%;
-    margin: 0 0.5rem;
-}
-
-footer span:first-of-type {
-    color: var(--White);
-    opacity: 0.6;
-    font-weight: 200;
-    margin: 0 0.5rem;
-}
-
-footer span:last-child {
-    color: var(--White);
-}
-
-/* Owner Hover */
-footer span:last-child:hover {
-    color: var(--Cyan);
+.cancel:hover {
+    color: black;
     cursor: pointer;
 }
 
-/* Media Qery */
-@media (max-width: 375px) {
+.attribution-2 {
+    display: none;
+}
 
+/* Media Query  */
+@media (max-width: 375px) {
+    
     body {
-        font-size: 16px;
-        line-height: 1;
+        font-size: 14px;
     }
 
     main {
-        align-content: space-evenly;
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0.5rem;
+        display: flex;
+        flex-flow: row wrap;
+        border-radius: 0px;
     }
 
-    article p {
-        padding: 0.7rem;
+    main header img {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
     }
 
-    article h1 {
-        margin: -1rem 1rem 0;
-    }
+    main article p {
+        padding: 0 1rem;
+    } 
 
     main section {
-        padding: 0.5rem;
+        width: 90%;
+        margin: 0.7rem;
+        padding: 0.5rem 0;
+
+    }
+    main section div:first-of-type {
+        justify-content: center;
     }
 
 
-    hr {
-        margin: 0.2rem 1rem;
+    main section img {
+        width: 40px;
     }
 
-    footer {
-        padding: 0.7rem !important;
+    main .payment {
+        width: 90%;
+        margin: 0.7rem;
     }
 
+    main .cancel-div {
+        width: 100%;
+        text-align: center;
+    } 
+
+    .attribution-1 {
+        display: none;
+    }
+
+    .attribution-2 {
+        display: block;
+        margin: 1rem 0;
+    }
 }

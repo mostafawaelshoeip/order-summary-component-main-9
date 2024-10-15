@@ -1,9 +1,9 @@
 ``` 
 
-My challenge 08 with Frontend Mentor.
+My challenge 09 with Frontend Mentor.
 
-This is a responsive NTF preview card component.
+This is a responsive Order summary card.
 
-Created on 9/10/2024
+Created on 15/10/2024
 
 ```
