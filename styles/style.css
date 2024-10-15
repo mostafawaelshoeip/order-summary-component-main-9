@@ -37,11 +37,11 @@ body {
 main {
     background-color: white;
     width: 100%;
-    max-width: 400px;
-    max-height: 520px;
+    max-width: 350px;
+    max-height: 600px;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30% 32% 15% 15% 8%;
+    grid-template-rows: 30% 31% 15% 16% 8%;
     border-radius: 20px;
     margin: 0 1rem;
 }
@@ -58,6 +58,7 @@ main header img {
 main article h1 {
     padding: 2rem 1rem 1rem;
     font-weight: 850;
+    opacity: 0.8;
 }
 
 main article p {
@@ -90,6 +91,7 @@ main section div:first-of-type {
 main section div p:first-of-type {
     font-weight: 800;
     font-size: 1.2em;
+    opacity: 0.8;
 }
 
 main section div p:last-of-type {
@@ -99,7 +101,7 @@ main section div p:last-of-type {
 
 main section div:last-of-type a {
     color: rgb(94, 5, 211);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 main section div:last-of-type a:hover {
